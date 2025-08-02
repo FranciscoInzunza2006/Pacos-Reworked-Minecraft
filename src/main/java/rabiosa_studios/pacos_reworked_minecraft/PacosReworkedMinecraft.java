@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import rabiosa_studios.pacos_reworked_minecraft.item.ModItem;
 
 public class PacosReworkedMinecraft implements ModInitializer {
 	public static final String MOD_ID = "pacos-reworked-minecraft";
@@ -11,6 +12,6 @@ public class PacosReworkedMinecraft implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
+		ModItem.initialize();
 	}
 }
