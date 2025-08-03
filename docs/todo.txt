@@ -1,0 +1,38 @@
+
+* Backport copper set
+
+* Add Reinforced Gold Tools (https://www.reddit.com/r/PhoenixSC/s/u7HFx5oaUI)
+    * As good as iron and has more durability (500)
+    * Good enchantability
+
+* Add rose gold (Very durable)
+
+* Add jams
+
+* Rebalance Tools set
+    * Copper Tools
+        * More durability than iron
+    * Gold Tools
+        * Faster than iron
+
+    * Can break higher tier materials
+
+* Tweaks
+    * Add crafting recipes
+    * Add copper nuggets
+    * Smeltable tools
+
+* Other ideas
+    * Buff the heck outta potions
+        * Stackable
+        * Brewing gives by default level 2 and with increased duration
+    * Buff enchanting system
+        * At least two enchantments in the enchantment table
+    * Rebalance weapons for combat purposes
+        * Maces and tridents are side-grades to the axe
+        * Each tool has a different use in combat situations
+            * Sword: Good all around with crowd control
+            * Axe: Slow but strong
+            * Pickaxe: idk
+            * Shovel: More critical damage
+            * Hoe: More speed or range
