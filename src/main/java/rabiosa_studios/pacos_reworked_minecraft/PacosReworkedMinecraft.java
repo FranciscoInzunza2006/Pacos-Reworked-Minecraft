@@ -13,7 +13,7 @@ public class PacosReworkedMinecraft implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		ModItemGroups.registerItemGroups();
 		ModItems.registerItems();
+		ModItemGroups.registerItemGroups();
 	}
 }
