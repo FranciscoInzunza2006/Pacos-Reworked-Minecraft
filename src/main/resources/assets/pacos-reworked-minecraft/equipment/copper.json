@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "pacos-reworked-minecraft:copper"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "pacos-reworked-minecraft:copper"
+      }
+    ]
+  }
+}

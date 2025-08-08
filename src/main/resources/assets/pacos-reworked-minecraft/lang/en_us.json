@@ -1,9 +1,16 @@
 {
+  "itemGroup.pacos_reworked_minecraft": "Paco's Reworked Minecraft",
+
   "item.pacos-reworked-minecraft.copper_sword": "Copper Sword",
   "item.pacos-reworked-minecraft.copper_pickaxe": "Copper Pickaxe",
   "item.pacos-reworked-minecraft.copper_axe": "Copper Axe",
   "item.pacos-reworked-minecraft.copper_shovel": "Copper Shovel",
   "item.pacos-reworked-minecraft.copper_hoe": "Copper Hoe",
+
+  "item.pacos-reworked-minecraft.copper_helmet": "Copper Helmet",
+  "item.pacos-reworked-minecraft.copper_chestplate": "Copper Chestplate",
+  "item.pacos-reworked-minecraft.copper_leggings": "Copper Leggings",
+  "item.pacos-reworked-minecraft.copper_boots": "Copper Boots",
 
   "item.pacos-reworked-minecraft.copper_nugget": "Copper Nugget",
 
