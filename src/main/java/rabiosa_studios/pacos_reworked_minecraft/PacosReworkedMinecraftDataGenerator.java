@@ -2,6 +2,8 @@ package rabiosa_studios.pacos_reworked_minecraft;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import rabiosa_studios.pacos_reworked_minecraft.datagen.ModAdvancementProvider;
+import rabiosa_studios.pacos_reworked_minecraft.datagen.ModItemTagProvider;
 import rabiosa_studios.pacos_reworked_minecraft.datagen.ModRecipeProvider;
 
 public class PacosReworkedMinecraftDataGenerator implements DataGeneratorEntrypoint {
@@ -10,5 +12,7 @@ public class PacosReworkedMinecraftDataGenerator implements DataGeneratorEntrypo
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
 		pack.addProvider(ModRecipeProvider::new);
+		pack.addProvider(ModItemTagProvider::new);
+		pack.addProvider(ModAdvancementProvider::new);
 	}
 }

@@ -14,5 +14,10 @@
 
   "item.pacos-reworked-minecraft.copper_nugget": "Copper Nugget",
 
-  "item.pacos-reworked-minecraft.suspicious_substance": "Suspicious Substance"
+  "item.pacos-reworked-minecraft.suspicious_substance": "Suspicious Substance",
+
+  "advancements.pacos-reworked-minecraft.copper_tools.title": "Copper Pickaxe Advancement",
+  "advancements.pacos-reworked-minecraft.copper_tools.description": "Copper Pickaxe Advancement Description",
+  "advancements.pacos-reworked-minecraft.smelt_copper.title": "Copper Ingot Advancement",
+  "advancements.pacos-reworked-minecraft.smelt_copper.description": "Copper Ingot Advancement Description"
 }
