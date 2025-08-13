@@ -41,16 +41,24 @@ public class ModItemGroups {
         item_group.add(ModItems.COPPER_HOE);
     }
 
+    private static void registerFoods (FabricItemGroupEntries item_group) {
+        item_group.add(ModItems.MELON_JAM);
+        item_group.add(ModItems.SWEET_BERRIES_JAM);
+        item_group.add(ModItems.GLOW_BERRIES_JAM);
+    }
+
     public static void registerItemGroups() {
         Registry.register(Registries.ITEM_GROUP, MOD_ITEM_GROUP_KEY, MOD_ITEM_GROUP);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItemGroups::registerModItems);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(ModItemGroups::registerEquipment);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(ModItemGroups::registerTools);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(ModItemGroups::registerFoods);
 
         ItemGroupEvents.modifyEntriesEvent(MOD_ITEM_GROUP_KEY).register(ModItemGroups::registerModItems);
         ItemGroupEvents.modifyEntriesEvent(MOD_ITEM_GROUP_KEY).register(ModItemGroups::registerEquipment);
         ItemGroupEvents.modifyEntriesEvent(MOD_ITEM_GROUP_KEY).register(ModItemGroups::registerTools);
+        ItemGroupEvents.modifyEntriesEvent(MOD_ITEM_GROUP_KEY).register(ModItemGroups::registerFoods);
     }
 
 

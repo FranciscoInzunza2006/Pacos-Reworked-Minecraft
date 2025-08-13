@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "pacos-reworked-minecraft:item/melon_jam"
+  }
+}

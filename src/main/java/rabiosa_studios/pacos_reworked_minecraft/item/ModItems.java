@@ -43,6 +43,34 @@ public class ModItems {
 
     public static final Item COPPER_NUGGET = registerItem("copper_nugget", Item::new);
 
+    // Foods
+    public static final Item MELON_JAM = registerItem("melon_jam",
+            settings -> new Item(
+                    settings.food(ModFoodComponents.JAM_FOOD, ModConsumableComponents.MELON_JAM)
+                            .recipeRemainder(Items.GLASS_BOTTLE)
+                            .useRemainder(Items.GLASS_BOTTLE)
+                            .maxCount(16)
+            )
+    );
+
+    public static final Item SWEET_BERRIES_JAM = registerItem("sweet_berries_jam",
+            settings -> new Item(
+                    settings.food(ModFoodComponents.JAM_FOOD, ModConsumableComponents.SWEET_BERRIES)
+                            .recipeRemainder(Items.GLASS_BOTTLE)
+                            .useRemainder(Items.GLASS_BOTTLE)
+                            .maxCount(16)
+            )
+    );
+
+    public static final Item GLOW_BERRIES_JAM = registerItem("glow_berries_jam",
+            settings -> new Item(
+                    settings.food(ModFoodComponents.JAM_FOOD, ModConsumableComponents.GLOW_BERRIES)
+                            .recipeRemainder(Items.GLASS_BOTTLE)
+                            .useRemainder(Items.GLASS_BOTTLE)
+                            .maxCount(16)
+            )
+    );
+
     // Miscellaneous
     public static final Item SUSPICIOUS_SUBSTANCE = registerItem("suspicious_substance", Item::new);
 
