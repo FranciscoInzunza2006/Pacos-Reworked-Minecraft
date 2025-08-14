@@ -1,13 +1,13 @@
 
-* Backport copper set
+* Backport copper set X
 
-* Add Reinforced Gold Tools (https://www.reddit.com/r/PhoenixSC/s/u7HFx5oaUI)
+* Add Reinforced Gold Tools (https://www.reddit.com/r/PhoenixSC/s/u7HFx5oaUI) X
     * As good as iron and has more durability (500)
     * Good enchantability
 
 * Add rose gold (Very durable)
 
-* Add jams
+* Add jams X
 
 * Rebalance Tools set
     * Copper Tools
@@ -18,9 +18,9 @@
     * Can break higher tier materials
 
 * Tweaks
-    * Add crafting recipes
-    * Add copper nuggets
-    * Smeltable tools
+    * Add crafting recipes X
+    * Add copper nuggets X
+    * Smeltable tools X
 
 * Other ideas
     * Buff the heck outta potions
