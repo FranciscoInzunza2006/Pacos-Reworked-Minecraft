@@ -73,8 +73,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
 
                 offerAmethystUpgradeRecipe(Items.GOLDEN_SWORD,RecipeCategory.COMBAT, ModItems.REINFORCED_GOLDEN_SWORD);
+                offerAmethystUpgradeRecipe(Items.GOLDEN_PICKAXE,RecipeCategory.TOOLS, ModItems.REINFORCED_GOLDEN_PICKAXE);
+                offerAmethystUpgradeRecipe(Items.GOLDEN_AXE,RecipeCategory.TOOLS, ModItems.REINFORCED_GOLDEN_AXE);
+                offerAmethystUpgradeRecipe(Items.GOLDEN_SHOVEL,RecipeCategory.TOOLS, ModItems.REINFORCED_GOLDEN_SHOVEL);
+                offerAmethystUpgradeRecipe(Items.GOLDEN_HOE,RecipeCategory.TOOLS, ModItems.REINFORCED_GOLDEN_HOE);
 
-
+                List<ItemConvertible> reinforced_golden_items = List.of(ModItems.REINFORCED_GOLDEN_SWORD, ModItems.REINFORCED_GOLDEN_PICKAXE, ModItems.REINFORCED_GOLDEN_AXE, ModItems.REINFORCED_GOLDEN_HOE, ModItems.REINFORCED_GOLDEN_SHOVEL);
+                offerSmelting(reinforced_golden_items, RecipeCategory.MISC, Items.GOLD_INGOT, 0.1f, 200, "gold_ingot_from_smelting");
+                offerBlasting(reinforced_golden_items, RecipeCategory.MISC, Items.GOLD_INGOT, 0.1f, 100, "gold_ingot_from_blasting");
                 // endregion
 
                 // region FOODS
