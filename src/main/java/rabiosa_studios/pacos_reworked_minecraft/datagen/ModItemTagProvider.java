@@ -17,19 +17,24 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         valueLookupBuilder(ItemTags.SWORDS)
-                .add(ModItems.COPPER_SWORD);
+                .add(ModItems.COPPER_SWORD)
+                .add(ModItems.REINFORCED_GOLDEN_SWORD);
 
         valueLookupBuilder(ItemTags.PICKAXES)
-                .add(ModItems.COPPER_PICKAXE);
+                .add(ModItems.COPPER_PICKAXE)
+                .add(ModItems.REINFORCED_GOLDEN_PICKAXE);
 
         valueLookupBuilder(ItemTags.SHOVELS)
-                .add(ModItems.COPPER_SHOVEL);
+                .add(ModItems.COPPER_SHOVEL)
+                .add(ModItems.REINFORCED_GOLDEN_SHOVEL);
 
         valueLookupBuilder(ItemTags.AXES)
-                .add(ModItems.COPPER_AXE);
+                .add(ModItems.COPPER_AXE)
+                .add(ModItems.REINFORCED_GOLDEN_AXE);
 
         valueLookupBuilder(ItemTags.HOES)
-                .add(ModItems.COPPER_HOE);
+                .add(ModItems.COPPER_HOE)
+                .add(ModItems.REINFORCED_GOLDEN_HOE);
 
         valueLookupBuilder(ItemTags.HEAD_ARMOR)
                 .add(ModItems.COPPER_HELMET);

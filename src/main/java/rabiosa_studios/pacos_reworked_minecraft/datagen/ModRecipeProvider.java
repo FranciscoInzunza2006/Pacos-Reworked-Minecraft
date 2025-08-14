@@ -4,10 +4,14 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
+import net.minecraft.data.recipe.SmithingTransformRecipeJsonBuilder;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.ItemTags;
 import rabiosa_studios.pacos_reworked_minecraft.item.ModItems;
 
 import java.util.List;
@@ -22,6 +26,29 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     @Override
     protected RecipeGenerator getRecipeGenerator(RegistryWrapper.WrapperLookup registryLookup, RecipeExporter exporter) {
         return new RecipeGenerator(registryLookup, exporter) {
+            public void offerJamRecipe(ItemConvertible jam, ItemConvertible ingredient, RecipeExporter exporter) {
+                createShaped(RecipeCategory.FOOD, jam)
+                        .pattern("XBX")
+                        .pattern("#X#")
+                        .input('B', Items.GLASS_BOTTLE)
+                        .input('#', Items.SUGAR)
+                        .input('X', ingredient)
+                        .criterion(hasItem(ingredient), conditionsFromItem(ingredient))
+                        .offerTo(exporter);
+            }
+
+            public void offerAmethystUpgradeRecipe(Item input, RecipeCategory category, Item result) {
+                SmithingTransformRecipeJsonBuilder.create(
+                                Ingredient.ofItem(ModItems.AMETHYST_UPGRADE_SMITHING_TEMPLATE),
+                                Ingredient.ofItem(input),
+                                Ingredient.ofItem(Items.AMETHYST_SHARD),
+                                category,
+                                result
+                        )
+                        .criterion(hasItem(Items.AMETHYST_SHARD), this.conditionsFromItem(Items.AMETHYST_SHARD))
+                        .offerTo(this.exporter, getItemPath(result) + "_smithing");
+            }
+
             @Override
             public void generate() {
                 //RegistryWrapper.Impl<Item> itemLookup = registries.getOrThrow(RegistryKeys.ITEM);
@@ -34,40 +61,26 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerBlasting(copper_items, RecipeCategory.MISC, ModItems.COPPER_NUGGET, 0.1f, 100, "copper_nugget_from_blasting");
                 // endregion
 
+                // region REINFORCED GOLD
+                createShaped(RecipeCategory.MISC, ModItems.AMETHYST_UPGRADE_SMITHING_TEMPLATE)
+                        .input('#', Items.GOLD_INGOT)
+                        .input('C', Items.AMETHYST_SHARD)
+                        .input('S', Items.COBBLED_DEEPSLATE)
+                        .pattern("#S#")
+                        .pattern("#C#")
+                        .pattern("###")
+                        .criterion(hasItem(Items.AMETHYST_SHARD), conditionsFromItem(Items.AMETHYST_SHARD))
+                        .offerTo(exporter);
+
+                offerAmethystUpgradeRecipe(Items.GOLDEN_SWORD,RecipeCategory.COMBAT, ModItems.REINFORCED_GOLDEN_SWORD);
+
+
+                // endregion
+
                 // region FOODS
-                createShaped(RecipeCategory.FOOD, ModItems.MELON_JAM)
-                        .pattern("ibi")
-                        .pattern("sis")
-                        .input('b', Items.GLASS_BOTTLE)
-                        .input('s', Items.SUGAR)
-                        .input('i', Items.MELON_SLICE)
-                        .criterion(hasItem(Items.GLASS_BOTTLE), conditionsFromItem(Items.GLASS_BOTTLE))
-                        .criterion(hasItem(Items.SUGAR), conditionsFromItem(Items.SUGAR))
-                        .criterion(hasItem(Items.MELON_SLICE), conditionsFromItem(Items.MELON_SLICE))
-                        .offerTo(exporter);
-
-                createShaped(RecipeCategory.FOOD, ModItems.SWEET_BERRIES_JAM)
-                        .pattern("ibi")
-                        .pattern("sis")
-                        .input('b', Items.GLASS_BOTTLE)
-                        .input('s', Items.SUGAR)
-                        .input('i', Items.SWEET_BERRIES)
-                        .criterion(hasItem(Items.GLASS_BOTTLE), conditionsFromItem(Items.GLASS_BOTTLE))
-                        .criterion(hasItem(Items.SUGAR), conditionsFromItem(Items.SUGAR))
-                        .criterion(hasItem(Items.SWEET_BERRIES), conditionsFromItem(Items.SWEET_BERRIES))
-                        .offerTo(exporter);
-
-                createShaped(RecipeCategory.FOOD, ModItems.GLOW_BERRIES_JAM)
-                        .pattern("ibi")
-                        .pattern("sis")
-                        .input('b', Items.GLASS_BOTTLE)
-                        .input('s', Items.SUGAR)
-                        .input('i', Items.GLOW_BERRIES)
-                        .criterion(hasItem(Items.GLASS_BOTTLE), conditionsFromItem(Items.GLASS_BOTTLE))
-                        .criterion(hasItem(Items.SUGAR), conditionsFromItem(Items.SUGAR))
-                        .criterion(hasItem(Items.GLOW_BERRIES), conditionsFromItem(Items.GLOW_BERRIES))
-                        .offerTo(exporter);
-
+                offerJamRecipe(ModItems.MELON_JAM, Items.MELON_SLICE, exporter);
+                offerJamRecipe(ModItems.SWEET_BERRIES_JAM, Items.SWEET_BERRIES, exporter);
+                offerJamRecipe(ModItems.GLOW_BERRIES_JAM, Items.GLOW_BERRIES, exporter);
                 // endregion
             }
         };

@@ -20,8 +20,9 @@ public class ModItemGroups {
             .displayName(Text.translatable("itemGroup.pacos_reworked_minecraft"))
             .build();
 
-    private static void registerModItems(FabricItemGroupEntries item_group) {
+    private static void registerIngredients(FabricItemGroupEntries item_group) {
         item_group.add(ModItems.COPPER_NUGGET);
+        item_group.add(ModItems.AMETHYST_UPGRADE_SMITHING_TEMPLATE);
         item_group.add(ModItems.SUSPICIOUS_SUBSTANCE);
     }
 
@@ -32,6 +33,8 @@ public class ModItemGroups {
         item_group.add(ModItems.COPPER_CHESTPLATE);
         item_group.add(ModItems.COPPER_LEGGINGS);
         item_group.add(ModItems.COPPER_BOOTS);
+
+        item_group.add(ModItems.REINFORCED_GOLDEN_SWORD);
     }
 
     private static void registerTools (FabricItemGroupEntries item_group) {
@@ -39,6 +42,11 @@ public class ModItemGroups {
         item_group.add(ModItems.COPPER_PICKAXE);
         item_group.add(ModItems.COPPER_AXE);
         item_group.add(ModItems.COPPER_HOE);
+
+        item_group.add(ModItems.REINFORCED_GOLDEN_SHOVEL);
+        item_group.add(ModItems.REINFORCED_GOLDEN_PICKAXE);
+        item_group.add(ModItems.REINFORCED_GOLDEN_AXE);
+        item_group.add(ModItems.REINFORCED_GOLDEN_HOE);
     }
 
     private static void registerFoods (FabricItemGroupEntries item_group) {
@@ -50,12 +58,12 @@ public class ModItemGroups {
     public static void registerItemGroups() {
         Registry.register(Registries.ITEM_GROUP, MOD_ITEM_GROUP_KEY, MOD_ITEM_GROUP);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItemGroups::registerModItems);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItemGroups::registerIngredients);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(ModItemGroups::registerEquipment);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(ModItemGroups::registerTools);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(ModItemGroups::registerFoods);
 
-        ItemGroupEvents.modifyEntriesEvent(MOD_ITEM_GROUP_KEY).register(ModItemGroups::registerModItems);
+        ItemGroupEvents.modifyEntriesEvent(MOD_ITEM_GROUP_KEY).register(ModItemGroups::registerIngredients);
         ItemGroupEvents.modifyEntriesEvent(MOD_ITEM_GROUP_KEY).register(ModItemGroups::registerEquipment);
         ItemGroupEvents.modifyEntriesEvent(MOD_ITEM_GROUP_KEY).register(ModItemGroups::registerTools);
         ItemGroupEvents.modifyEntriesEvent(MOD_ITEM_GROUP_KEY).register(ModItemGroups::registerFoods);

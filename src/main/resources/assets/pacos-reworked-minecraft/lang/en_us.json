@@ -14,6 +14,13 @@
 
   "item.pacos-reworked-minecraft.copper_nugget": "Copper Nugget",
 
+  "item.pacos-reworked-minecraft.amethyst_upgrade_smithing_template": "Amethyst Upgrade",
+  "item.pacos-reworked-minecraft.reinforced_golden_sword": "Reinforced Golden Sword",
+  "item.pacos-reworked-minecraft.reinforced_golden_pickaxe": "Reinforced Golden Pickaxe",
+  "item.pacos-reworked-minecraft.reinforced_golden_axe": "Reinforced Golden Axe",
+  "item.pacos-reworked-minecraft.reinforced_golden_shovel": "Reinforced Golden Shovel",
+  "item.pacos-reworked-minecraft.reinforced_golden_hoe": "Reinforced Golden Hoe",
+
   "item.pacos-reworked-minecraft.melon_jam": "Melon Jam",
   "item.pacos-reworked-minecraft.sweet_berries_jam": "Sweet Berries Jam",
   "item.pacos-reworked-minecraft.glow_berries_jam": "Glow Berries Jam",
@@ -23,5 +30,11 @@
   "advancements.pacos-reworked-minecraft.copper_tools.title": "Copper Pickaxe Advancement",
   "advancements.pacos-reworked-minecraft.copper_tools.description": "Copper Pickaxe Advancement Description",
   "advancements.pacos-reworked-minecraft.smelt_copper.title": "Copper Ingot Advancement",
-  "advancements.pacos-reworked-minecraft.smelt_copper.description": "Copper Ingot Advancement Description"
+  "advancements.pacos-reworked-minecraft.smelt_copper.description": "Copper Ingot Advancement Description",
+  "item.pacos-reworked-minecraft.smithing_template.amethyst_upgrade.applies_to": "Gold Equipment",
+  "item.pacos-reworked-minecraft.smithing_template.amethyst_upgrade.ingredients": "Amethyst Shard",
+  "item.pacos-reworked-minecraft.smithing_template.amethyst_upgrade.additions_slot_description": "Add Amethyst Shard",
+  "item.pacos-reworked-minecraft.smithing_template.amethyst_upgrade.base_slot_description": "Add gold amor, weapon or tool",
+
+  "item.pacos-reworked-minecraft.wenomechainsama": "Wenomechainsama"
 }

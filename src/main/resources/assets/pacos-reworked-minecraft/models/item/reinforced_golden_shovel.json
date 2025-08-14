@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "pacos-reworked-minecraft:item/reinforced_golden_shovel"
+  }
+}
