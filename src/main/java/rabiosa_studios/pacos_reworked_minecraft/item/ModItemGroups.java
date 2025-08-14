@@ -23,7 +23,6 @@ public class ModItemGroups {
     private static void registerIngredients(FabricItemGroupEntries item_group) {
         item_group.add(ModItems.COPPER_NUGGET);
         item_group.add(ModItems.AMETHYST_UPGRADE_SMITHING_TEMPLATE);
-        item_group.add(ModItems.SUSPICIOUS_SUBSTANCE);
     }
 
     private static void registerEquipment (FabricItemGroupEntries item_group) {
